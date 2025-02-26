@@ -31,3 +31,9 @@ const num = parseInt(prompt("Inserisci un numero da 1 a 6"));
 //stampo i numeri scelti dall'utente
 console.log(odd, num);
 
+//genero il lancio di dado per il computer
+
+const numComputer = Math.floor(Math.random() * 6) + 1;
+
+//stampo il numero del computer
+console.log(numComputer);
