@@ -18,12 +18,15 @@ RAGIONAMENTO
 
 5. Creo una funzione per stabilire se la somma dei due numeri è pari o dispari e la lascio in fondo al codice
 
+
+-- Rifletto-- 
+
+non mi piace che se inserisco una parola sbagliata mi fa comunque inserire poi altro, dopo il commit e il push vorrei lavorare per bloccare i due prompt e farli ripetere se non sono soddisfatti i requisiti.
 */
 
 //Pari e Dispari
 //utente sceglie tra pari e dispari
 const odd = prompt("Scegli tra pari e dispari");
-
 
 //utente inserisce un numero da 1 a 6
 const num = parseInt(prompt("Inserisci un numero da 1 a 6"));
@@ -32,8 +35,38 @@ const num = parseInt(prompt("Inserisci un numero da 1 a 6"));
 console.log(odd, num);
 
 //genero il lancio di dado per il computer
-
-const numComputer = Math.floor(Math.random() * 6) + 1;
+const numComputer = getRndInteger(1, 6);
 
 //stampo il numero del computer
 console.log(numComputer);
+
+//sommo i due numeri
+const somma = num + numComputer;
+
+//stampo la somma
+console.log(somma);
+
+//dichiaro chi ha vinto
+if (isEven(somma) == true && odd == "pari") {
+    console.log("Hai vinto");
+} else if (isEven(somma) == false && odd == "dispari") {
+    console.log("Hai vinto");
+} else {
+    console.log("Hai perso");
+}
+
+//FUNZIONI
+
+//stabilisco se la somma dei due numeri è pari o dispari con funzione
+function isEven (num) {
+    if (num % 2 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//dado
+function getRndInteger (min, max) {
+    return Math. floor (Math. random() * (max - min + 1) ) + min;
+}
