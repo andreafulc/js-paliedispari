@@ -21,15 +21,25 @@ RAGIONAMENTO
 
 -- Rifletto-- 
 
-non mi piace che se inserisco una parola sbagliata mi fa comunque inserire poi altro, dopo il commit e il push vorrei lavorare per bloccare i due prompt e farli ripetere se non sono soddisfatti i requisiti.
+non mi piace che se inserisco una parola sbagliata mi fa comunque inserire poi altro, dopo il commit e il push vorrei lavorare per bloccare i due prompt e farli ripetere se non sono soddisfatti i requisiti. (RISOLTO credo)
+
+
 */
 
 //Pari e Dispari
 //utente sceglie tra pari e dispari
-const odd = prompt("Scegli tra pari e dispari");
+ 
 
-//utente inserisce un numero da 1 a 6
-const num = parseInt(prompt("Inserisci un numero da 1 a 6"));
+// l'utente inserisce pari e dispari e un numero da 1 a 6
+let odd;
+do {
+    odd = prompt("Scegli tra 'pari' o 'dispari':").toLowerCase().trim();
+} while (odd !== "pari" && odd !== "dispari");
+
+let num;
+do {
+    num = parseInt(prompt("Scegli un numero tra 1 e 6:"));
+} while (isNaN(num) || num < 1 || num > 6);
 
 //stampo i numeri scelti dall'utente
 console.log(odd, num);
