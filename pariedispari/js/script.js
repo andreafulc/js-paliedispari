@@ -51,19 +51,45 @@ const numComputer = getRndInteger(1, 6);
 console.log(numComputer);
 
 //sommo i due numeri
-const somma = num + numComputer;
+const sum = num + numComputer;
 
 //stampo la somma
 console.log(somma);
 
 //dichiaro chi ha vinto
-if (isEven(somma) == true && odd == "pari") {
+if (isEven(sum) == true && odd == "pari") {
     console.log("Hai vinto");
-} else if (isEven(somma) == false && odd == "dispari") {
+} else if (isEven(sum) == false && odd == "dispari") {
     console.log("Hai vinto");
 } else {
     console.log("Hai perso");
 }
+
+/*
+CORREZIONE DI OLGA
+
+const
+userChoice = "pari";
+const userNumber = 3;
+const computerNumber = getRndInteger (1, 6);
+console. log (computerNumber):
+const
+sum = userNumber + computerNumber;
+console. log (sum) ;
+const result = pariDispari (sum);
+console. log (result);
+let
+message = "";
+if
+(result
+=== userChoice) {
+message = "Hai vinto! Congratulazioni!";
+}else {
+message = "Mi dispiace, hai perso :(";
+console. log (message);
+}
+*/
+
 
 //FUNZIONI
 
@@ -75,6 +101,23 @@ function isEven (num) {
         return false;
     }
 }
+
+/*
+CORREZIONE DI OLGA
+
+function pariDispari (numberToCheck)
+let result;
+if (numberToCheck % 2 ===
+0)
+{
+result = "pari";
+}
+else {
+result = "dispari";
+}
+return result;
+}
+*/
 
 //dado
 function getRndInteger (min, max) {

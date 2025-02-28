@@ -52,3 +52,53 @@ function palindroma(parola) {
 }
 
 
+
+
+/*
+LA CORREZIONE DI OLGA 
+
+const userword
+= "anna";
+20
+21
+const wordPalindrome
+= isPalindrom(userWord);
+22
+23
+if
+24
+25
+}
+(wordPalindrome === true)
+1
+console. log("La parola è palindroma");
+else
+{
+26
+console. log("La parola non è palindroma") ;
+27
+}
+28
+29
+30
+N:://///1/////1/1//
+/ / FUNCTIONS
+31
+32
+33
+34
+35
+• & Launchpad
+// params: wordToCheck {string} - la parola da verificare
+// return: {boolean}
+true
+se palindroma, false altrimenti
+function isPalindrom (wordToCheck) 
+let reverseWord = "";
+for (let i = wordToCheck.length - 1; i >= 0; i - -) {
+const curLetter = wordToCheck. charAt (i);
+reverseWord += curLetter;
+console. log (reverseWord
+=== wordToCheck);
+
+*/
